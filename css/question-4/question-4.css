@@ -1,0 +1,40 @@
+
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #FF5733;
+    --font-color: #333;
+    --font-size: 16px;
+    --button-padding: 10px 20px;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: var(--font-color);
+    font-size: var(--font-size);
+  }
+
+  .header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .btn {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: var(--button-padding);
+    font-size: var(--font-size);
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn:hover {
+    background-color: var(--primary-color);
+  }
+  

@@ -22,16 +22,14 @@ for (let i = 1; i <= 100000; i++) {
 // DO NOT EDIT THIS PART***
 
 function generateUsersDetail(userIds, userNames, userPhotos) {
-    const result = [];
+    const nameMap = Object.fromEntries(userNames.map(user => [user.userId, user.name]));
+    const photoMap = Object.fromEntries(userPhotos.map(user => [user.userId, user.photo]));
 
-    userIds.forEach((userId) => {
-        result.push({
-            userId,
-            fullName: userNames?.find(uD => uD.userId === userId)?.name || '',
-            photo: userPhotos?.find(uD => uD.userId === userId)?.photo || '',
-        })
-    })
-    return result;
+    return userIds.map(userId => ({
+        userId,
+        fullName: nameMap[userId] || '',
+        photo: photoMap[userId] || '',
+    }));
 }
 
 // ***DO NOT EDIT THIS PART
